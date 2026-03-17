@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ouraboros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="cur"></div>
+  <div id="curRing"></div>
+  <div id="gameOverFlash"></div>
+  <div id="frenzyOverlay"></div>
+  <div id="frenzyTimer">
+    <canvas id="ftc" width="72" height="72"></canvas>
+    <span id="frenzyLabel">frenzy</span>
+  </div>
+  <canvas id="snakeCanvas"></canvas>
+  <div class="grain"></div>
+
+  <nav>
+    <div class="logo">Ouraboros Center</div>
+    <ul class="nav-links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Thoughts</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p class="hero-tagline">Software Engineer · Never Ending Cycle</p>
+      <h1 class="hero-title" id="heroTitle">Oura<em>boros</em></h1>
+
+      <div class="hero-emblem" id="emblem">
+        <div class="emblem-ring"></div>
+        <div class="emblem-ring-2"></div>
+        <div class="emblem-center">
+          <span class="emblem-symbol">∞</span>
+          <button class="btn-play" id="btnPlay"><span>Play with Isaac</span></button>
+          <div class="game-ui hidden" id="gameUI">
+            <span class="score-label" id="scoreLabel">score · 000</span>
+            <button class="btn-stop" id="btnStop">Stop Playing</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-sub">I build things, break things, and rebuild them —<br>finding meaning in the cycle that never stops.</p>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">⊕</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <section class="about-section">
+      <div class="section-label">Genesis</div>
+      <div class="about-body">
+        <h2>A mind that loops back<br>on <em>itself</em></h2>
+        <p>I'm Gen — a software engineer who thinks in systems and feels in cycles. I write code the way one writes a journal: honestly, iteratively, and always with the awareness that what's built today will be torn down and rebuilt into something truer tomorrow.</p>
+        <p>The name Ouraboros is intentional. Not the ancient serpent — something personal. A reminder that growth isn't linear. Every project, every problem, every version of me feeds the next.</p>
+        <p>I work across the full stack, drawn particularly to the places where <em>logic meets feeling</em> — interfaces that think, systems that breathe, code that carries intention.</p>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">◈</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <section class="concepts-section">
+      <div class="concepts-header">
+        <h2>How I move<br>through work</h2>
+      </div>
+      <div class="concepts-grid">
+        <div class="concept-card">
+          <span class="concept-num">01 / 06</span>
+          <h3 class="concept-title">Iter<em>ation</em></h3>
+          <p class="concept-desc">Nothing is ever finished — only transformed.</p>
+        </div>
+        <div class="concept-card">
+          <span class="concept-num">02 / 06</span>
+          <h3 class="concept-title">Depth over<em> speed</em></h3>
+          <p class="concept-desc">I move slowly through problems on purpose.</p>
+        </div>
+        <div class="concept-card">
+          <span class="concept-num">03 / 06</span>
+          <h3 class="concept-title">Sys<em>tems</em></h3>
+          <p class="concept-desc">I think in flows, dependencies, feedback loops.</p>
+        </div>
+        <div class="concept-card">
+          <span class="concept-num">04 / 06</span>
+          <h3 class="concept-title">Inten<em>tion</em></h3>
+          <p class="concept-desc">Code is communication. Every name says something.</p>
+        </div>
+        <div class="concept-card">
+          <span class="concept-num">05 / 06</span>
+          <h3 class="concept-title">Quiet<em>ness</em></h3>
+          <p class="concept-desc">I don't ship noise. Quality lives in silence.</p>
+        </div>
+        <div class="concept-card">
+          <span class="concept-num">06 / 06</span>
+          <h3 class="concept-title">Continu<em>ity</em></h3>
+          <p class="concept-desc">Every project I've touched has changed the next one.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-inner">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">I don't build to finish. I build to understand — and then I begin again.</p>
+        <p class="quote-attr">— Genesis · Ouraboros Center</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Ouraboros · Never Ending Cycle</div>
+    <div class="footer-copy">© MMXXVI · Gen</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
