@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ouraboros</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <title>Ouraboros — Genesis</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Game overlays -->
   <div id="cur"></div>
   <div id="curRing"></div>
   <div id="gameOverFlash"></div>
@@ -18,28 +18,45 @@
     <span id="frenzyLabel">frenzy</span>
   </div>
   <canvas id="snakeCanvas"></canvas>
-  <div class="grain"></div>
 
+  <!-- Nav — minimal, almost invisible -->
   <nav>
-    <div class="logo">Ouraboros Center</div>
+    <div class="logo">Ouraboros</div>
     <ul class="nav-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Thoughts</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#entries">Writing</a></li>
+      <li><a href="#manifesto">Manifesto</a></li>
     </ul>
   </nav>
 
   <main>
-    <section class="hero">
-      <p class="hero-tagline">Software Engineer · Never Ending Cycle</p>
-      <h1 class="hero-title" id="heroTitle">Oura<em>boros</em></h1>
 
-      <div class="hero-emblem" id="emblem">
-        <div class="emblem-ring"></div>
-        <div class="emblem-ring-2"></div>
-        <div class="emblem-center">
-          <span class="emblem-symbol">∞</span>
+    <!-- ============================================================
+         HERO — split: text left, figure right
+         ============================================================ -->
+    <section class="hero">
+
+      <!-- Text -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">Genesis · Personal Space</p>
+
+        <h1 class="hero-title" id="heroTitle">
+          Oura
+          <span class="hollow">boros</span>
+        </h1>
+
+        <p class="hero-sub">
+          reflections&nbsp;&nbsp;·&nbsp;&nbsp;cycles&nbsp;&nbsp;·&nbsp;&nbsp;never ending
+        </p>
+
+        <p class="hero-opening">
+          I write to understand what I cannot yet say out loud.
+          This is where I leave things behind so they stop
+          following me everywhere else.
+        </p>
+
+        <!-- Isaac mini-game -->
+        <div class="hero-game">
           <button class="btn-play" id="btnPlay"><span>Play with Isaac</span></button>
           <div class="game-ui hidden" id="gameUI">
             <span class="score-label" id="scoreLabel">score · 000</span>
@@ -48,80 +65,121 @@
         </div>
       </div>
 
-      <p class="hero-sub">I build things, break things, and rebuild them —<br>finding meaning in the cycle that never stops.</p>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+      <!-- Image -->
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <div class="hero-image-inner">
+            <img
+              src="hero.jpeg"
+              alt="the figure and the serpent"
+              class="hero-img"
+            >
+            <div class="hero-image-scan"></div>
+            <div class="hero-image-vignette"></div>
+          </div>
+        </div>
+        <span class="hero-image-caption">fig. 001 — the cycle</span>
+      </div>
+
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">·</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ============================================================
+         ABOUT — short, personal, not a bio
+         ============================================================ -->
+    <section class="intro-section" id="about">
+      <div class="section-label">About</div>
+      <div class="intro-body">
+        <h2>
+          I am someone who <strong>loops.</strong><br>
+          Everything I touch, I return to.
+        </h2>
+        <p>
+          My name is Gen. I build software by day and sit with my thoughts
+          by night. I'm interested in the space between logic and feeling —
+          the place where systems break down and something more honest begins.
+        </p>
+        <p>
+          This blog is not curated. It is not a personal brand.
+          It is a place where I think out loud — about relationships,
+          about God, about cycles I can't seem to break, about the strange
+          beauty of watching things fall apart and <em>choosing to rebuild anyway.</em>
+        </p>
+        <p>
+          The ouroboros eats its own tail. Not out of hunger —
+          out of necessity. The cycle is not a trap. It is the only
+          honest map I have.
+        </p>
       </div>
     </section>
 
     <div class="section-divider">
       <div class="divider-line"></div>
-      <div class="divider-symbol">⊕</div>
+      <div class="divider-symbol">·</div>
       <div class="divider-line"></div>
     </div>
 
-    <section class="about-section">
-      <div class="section-label">Genesis</div>
-      <div class="about-body">
-        <h2>A mind that loops back<br>on <em>itself</em></h2>
-        <p>I'm Gen — a software engineer who thinks in systems and feels in cycles. I write code the way one writes a journal: honestly, iteratively, and always with the awareness that what's built today will be torn down and rebuilt into something truer tomorrow.</p>
-        <p>The name Ouraboros is intentional. Not the ancient serpent — something personal. A reminder that growth isn't linear. Every project, every problem, every version of me feeds the next.</p>
-        <p>I work across the full stack, drawn particularly to the places where <em>logic meets feeling</em> — interfaces that think, systems that breathe, code that carries intention.</p>
+    <!-- ============================================================
+         ENTRIES — blog post list (placeholder entries)
+         ============================================================ -->
+    <section class="entries-section" id="entries">
+
+      <div class="entries-header">
+        <h2>Writing</h2>
+        <span>Stream of thought · Unfiltered</span>
       </div>
+
+      <article class="entry">
+        <div class="entry-date">
+          Mar 22<br>2026
+        </div>
+        <div class="entry-content">
+          <span class="entry-tag">Reflections</span>
+          <h3 class="entry-title">On carrying things you never agreed to carry</h3>
+          <p class="entry-excerpt">
+            There are burdens that arrive without announcement.
+            You wake up one day and realize they've been there for months,
+            quietly making themselves at home in the parts of you
+            that you thought were empty.
+          </p>
+          <span class="entry-read">Read →</span>
+        </div>
+      </article>
+
     </section>
 
     <div class="section-divider">
       <div class="divider-line"></div>
-      <div class="divider-symbol">◈</div>
+      <div class="divider-symbol">·</div>
       <div class="divider-line"></div>
     </div>
 
-    <section class="concepts-section">
-      <div class="concepts-header">
-        <h2>How I move<br>through work</h2>
-      </div>
-      <div class="concepts-grid">
-        <div class="concept-card">
-          <span class="concept-num">01 / 06</span>
-          <h3 class="concept-title">Iter<em>ation</em></h3>
-          <p class="concept-desc">Nothing is ever finished — only transformed.</p>
+    <!-- ============================================================
+         MANIFESTO — personal, poetic, very dark
+         ============================================================ -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="manifesto-inner">
+        <span class="manifesto-mark">"</span>
+        <div class="manifesto-lines">
+          <p class="manifesto-line">I do not write to be understood.</p>
+          <p class="manifesto-line lit">I write to stop drowning.</p>
+          <p class="manifesto-line">&nbsp;</p>
+          <p class="manifesto-line">Everything returns.</p>
+          <p class="manifesto-line">Every wound, every warmth,</p>
+          <p class="manifesto-line">every version of you I thought was gone.</p>
+          <p class="manifesto-line">&nbsp;</p>
+          <p class="manifesto-line lit">The loop is not a trap.</p>
+          <p class="manifesto-line">It is the only honest map I have.</p>
         </div>
-        <div class="concept-card">
-          <span class="concept-num">02 / 06</span>
-          <h3 class="concept-title">Depth over<em> speed</em></h3>
-          <p class="concept-desc">I move slowly through problems on purpose.</p>
-        </div>
-        <div class="concept-card">
-          <span class="concept-num">03 / 06</span>
-          <h3 class="concept-title">Sys<em>tems</em></h3>
-          <p class="concept-desc">I think in flows, dependencies, feedback loops.</p>
-        </div>
-        <div class="concept-card">
-          <span class="concept-num">04 / 06</span>
-          <h3 class="concept-title">Inten<em>tion</em></h3>
-          <p class="concept-desc">Code is communication. Every name says something.</p>
-        </div>
-        <div class="concept-card">
-          <span class="concept-num">05 / 06</span>
-          <h3 class="concept-title">Quiet<em>ness</em></h3>
-          <p class="concept-desc">I don't ship noise. Quality lives in silence.</p>
-        </div>
-        <div class="concept-card">
-          <span class="concept-num">06 / 06</span>
-          <h3 class="concept-title">Continu<em>ity</em></h3>
-          <p class="concept-desc">Every project I've touched has changed the next one.</p>
-        </div>
+        <p class="manifesto-attr">— Genesis · Ouraboros · MMXXVI</p>
       </div>
     </section>
 
-    <section class="quote-section">
-      <div class="quote-inner">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">I don't build to finish. I build to understand — and then I begin again.</p>
-        <p class="quote-attr">— Genesis · Ouraboros Center</p>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -130,5 +188,6 @@
   </footer>
 
   <script src="app.js"></script>
+
 </body>
 </html>

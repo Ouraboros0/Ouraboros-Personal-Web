@@ -262,7 +262,7 @@ function drawSnakeTrail() {
     ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
     const color = isSpeed()
       ? `rgba(255,120,60,${point.alpha})`   // oranye saat speed
-      : `rgba(201,185,154,${point.alpha})`; // krem normal
+      : `rgba(20,80,180,${point.alpha})`;   // biru normal
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -841,7 +841,7 @@ function drawPreyDot() {
   if (Math.sqrt(dx*dx+dy*dy) < 5) return;
   const alpha = 0.35 + 0.2 * Math.sin(Date.now() * 0.008);
   ctx.beginPath(); ctx.arc(mousePos.x, mousePos.y, 2.5, 0, Math.PI*2); ctx.fillStyle = `rgba(201,185,154,${alpha})`; ctx.fill();
-  ctx.beginPath(); ctx.arc(mousePos.x, mousePos.y, 6, 0, Math.PI*2); ctx.strokeStyle = `rgba(201,185,154,${alpha*0.3})`; ctx.lineWidth = 0.5; ctx.stroke();
+  ctx.beginPath(); ctx.arc(mousePos.x, mousePos.y, 6, 0, Math.PI*2); ctx.strokeStyle = `rgba(30,143,255,${alpha*0.2})`; ctx.lineWidth = 0.5; ctx.stroke();
 }
 
 
@@ -876,10 +876,10 @@ function drawSnake() {
   if ((immune || fast) && flickerVisible && gameState === 'playing') {
     for (let i = SEGMENT_COUNT - 1; i >= 0; i--) {
       const r = getSegmentRadius(i), fade = Math.max(0, 1-(i/(SEGMENT_COUNT-1))*0.75);
-      if (immune) { ctx.beginPath(); ctx.arc(segments[i].x,segments[i].y,r+4+immuneGlow*4,0,Math.PI*2); ctx.fillStyle=`rgba(140,190,255,${(0.12+immuneGlow*0.18)*fade})`; ctx.fill(); }
+      if (immune) { ctx.beginPath(); ctx.arc(segments[i].x,segments[i].y,r+4+immuneGlow*4,0,Math.PI*2); ctx.fillStyle=`rgba(40,200,100,${(0.12+immuneGlow*0.18)*fade})`; ctx.fill(); }
       if (fast)   { ctx.beginPath(); ctx.arc(segments[i].x,segments[i].y,r+2+speedGlow*3,0,Math.PI*2);  ctx.fillStyle=`rgba(255,120,60,${(0.1+speedGlow*0.15)*fade})`;   ctx.fill(); }
     }
-    if (immune) { ctx.beginPath(); ctx.arc(segments[0].x,segments[0].y,getSegmentRadius(0)+8+immuneGlow*5,0,Math.PI*2); ctx.strokeStyle=`rgba(140,190,255,${0.3+immuneGlow*0.3})`; ctx.lineWidth=1.5; ctx.stroke(); }
+    if (immune) { ctx.beginPath(); ctx.arc(segments[0].x,segments[0].y,getSegmentRadius(0)+8+immuneGlow*5,0,Math.PI*2); ctx.strokeStyle=`rgba(40,200,100,${0.3+immuneGlow*0.3})`; ctx.lineWidth=1.5; ctx.stroke(); }
     if (fast)   { ctx.beginPath(); ctx.arc(segments[0].x,segments[0].y,getSegmentRadius(0)+5+speedGlow*4,0,Math.PI*2);  ctx.strokeStyle=`rgba(255,120,60,${0.3+speedGlow*0.3})`;   ctx.lineWidth=1.5; ctx.stroke(); }
   }
 
@@ -891,10 +891,10 @@ function drawSnake() {
     const isScale = i % 3 === 0;
     let bc;
     if (frenzy)            bc = isScale ? `rgba(180,80,60,${a})`   : `rgba(140,50,40,${a})`;
-    else if (immune&&fast) bc = isScale ? `rgba(120,120,160,${a})` : `rgba(90,90,130,${a})`;
-    else if (immune)       bc = isScale ? `rgba(90,115,155,${a})`  : `rgba(70,90,125,${a})`;
+    else if (immune&&fast) bc = isScale ? `rgba(40,160,100,${a})` : `rgba(28,120,72,${a})`;
+    else if (immune)       bc = isScale ? `rgba(30,155,85,${a})`  : `rgba(20,115,60,${a})`;
     else if (fast)         bc = isScale ? `rgba(140,70,40,${a})`   : `rgba(110,50,30,${a})`;
-    else                   bc = isScale ? `rgba(80,62,38,${a})`    : `rgba(58,46,28,${a})`;
+    else                   bc = isScale ? `rgba(20,80,160,${a})`   : `rgba(14,58,120,${a})`;
 
     ctx.beginPath(); ctx.arc(segments[i].x,segments[i].y,r,0,Math.PI*2); ctx.fillStyle=bc; ctx.fill();
     ctx.beginPath(); ctx.arc(segments[i].x-r*0.2,segments[i].y-r*0.25,r*0.5,0,Math.PI*2); ctx.fillStyle=`rgba(201,185,154,${a*0.08})`; ctx.fill();
