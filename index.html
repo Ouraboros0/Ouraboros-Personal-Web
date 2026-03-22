@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ouraboros — Genesis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Game overlays -->
+  <div id="cur"></div>
+  <div id="curRing"></div>
+  <div id="gameOverFlash"></div>
+  <div id="frenzyOverlay"></div>
+  <div id="frenzyTimer">
+    <canvas id="ftc" width="72" height="72"></canvas>
+    <span id="frenzyLabel">frenzy</span>
+  </div>
+  <canvas id="snakeCanvas"></canvas>
+
+  <!-- Nav — minimal, almost invisible -->
+  <nav>
+    <div class="logo">Ouraboros</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#entries">Writing</a></li>
+      <li><a href="#manifesto">Manifesto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO — split: text left, figure right
+         ============================================================ -->
+    <section class="hero">
+
+      <!-- Text -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">Genesis · Personal Space</p>
+
+        <h1 class="hero-title" id="heroTitle">
+          Oura
+          <span class="hollow">boros</span>
+        </h1>
+
+        <p class="hero-sub">
+          reflections&nbsp;&nbsp;·&nbsp;&nbsp;cycles&nbsp;&nbsp;·&nbsp;&nbsp;never ending
+        </p>
+
+        <p class="hero-opening">
+          I write to understand what I cannot yet say out loud.
+          This is where I leave things behind so they stop
+          following me everywhere else.
+        </p>
+
+        <!-- Isaac mini-game -->
+        <div class="hero-game">
+          <button class="btn-play" id="btnPlay"><span>Play with Isaac</span></button>
+          <div class="game-ui hidden" id="gameUI">
+            <span class="score-label" id="scoreLabel">score · 000</span>
+            <button class="btn-stop" id="btnStop">Stop Playing</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <div class="hero-image-inner">
+            <img
+              src="hero.jpeg"
+              alt="the figure and the serpent"
+              class="hero-img"
+            >
+            <div class="hero-image-scan"></div>
+            <div class="hero-image-vignette"></div>
+          </div>
+        </div>
+        <span class="hero-image-caption">fig. 001 — the cycle</span>
+      </div>
+
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">·</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ============================================================
+         ABOUT — short, personal, not a bio
+         ============================================================ -->
+    <section class="intro-section" id="about">
+      <div class="section-label">About</div>
+      <div class="intro-body">
+        <h2>
+          I am someone who <strong>loops.</strong><br>
+          Everything I touch, I return to.
+        </h2>
+        <p>
+          My name is Gen. I build software by day and sit with my thoughts
+          by night. I'm interested in the space between logic and feeling —
+          the place where systems break down and something more honest begins.
+        </p>
+        <p>
+          This blog is not curated. It is not a personal brand.
+          It is a place where I think out loud — about relationships,
+          about God, about cycles I can't seem to break, about the strange
+          beauty of watching things fall apart and <em>choosing to rebuild anyway.</em>
+        </p>
+        <p>
+          The ouroboros eats its own tail. Not out of hunger —
+          out of necessity. The cycle is not a trap. It is the only
+          honest map I have.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">·</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ============================================================
+         ENTRIES — blog post list (placeholder entries)
+         ============================================================ -->
+    <section class="entries-section" id="entries">
+
+      <div class="entries-header">
+        <h2>Writing</h2>
+        <span>Stream of thought · Unfiltered</span>
+      </div>
+
+      <article class="entry">
+        <div class="entry-date">
+          Mar 22<br>2026
+        </div>
+        <div class="entry-content">
+          <span class="entry-tag">Reflections</span>
+          <h3 class="entry-title">On carrying things you never agreed to carry</h3>
+          <p class="entry-excerpt">
+            There are burdens that arrive without announcement.
+            You wake up one day and realize they've been there for months,
+            quietly making themselves at home in the parts of you
+            that you thought were empty.
+          </p>
+          <span class="entry-read">Read →</span>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-symbol">·</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ============================================================
+         MANIFESTO — personal, poetic, very dark
+         ============================================================ -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="manifesto-inner">
+        <span class="manifesto-mark">"</span>
+        <div class="manifesto-lines">
+          <p class="manifesto-line">I do not write to be understood.</p>
+          <p class="manifesto-line lit">I write to stop drowning.</p>
+          <p class="manifesto-line">&nbsp;</p>
+          <p class="manifesto-line">Everything returns.</p>
+          <p class="manifesto-line">Every wound, every warmth,</p>
+          <p class="manifesto-line">every version of you I thought was gone.</p>
+          <p class="manifesto-line">&nbsp;</p>
+          <p class="manifesto-line lit">The loop is not a trap.</p>
+          <p class="manifesto-line">It is the only honest map I have.</p>
+        </div>
+        <p class="manifesto-attr">— Genesis · Ouraboros · MMXXVI</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">Ouraboros · Never Ending Cycle</div>
+    <div class="footer-copy">© MMXXVI · Gen</div>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
